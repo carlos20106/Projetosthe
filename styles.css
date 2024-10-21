@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe7ff;
+    text-align: center;
+}
+
+.product-container {
+    margin: 50px auto;
+    max-width: 800px;
+    background-color: #ffedff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.product-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Responsividade */
+}
+
+.image-zoom-container {
+    position: relative;
+    width: 50%; 
+    max-width: 400px; /* Para não ficar muito grande em telas maiores */
+    height: auto;
+    overflow: hidden;
+}
+
+.image-zoom-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.product-info {
+    width: 45%;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.product-info h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    margin: 10px 0;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: auto;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .product-content {
+        flex-direction: column; /* Empilhar itens em telas menores */
+        align-items: center;
+    }
+
+    .image-zoom-container,
+    .product-info {
+        width: 100%; /* Ocupa a largura completa */
+    }
+
+    .product-info {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
